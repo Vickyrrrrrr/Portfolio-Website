@@ -16,6 +16,7 @@ import payloadmaster from "./projects/payloadmaster.png";
 import mhft from "./projects/mhft.png";
 import sketcher from "./projects/sketcher.png";
 import CompileVortex from "./projects/CompileVortex.png";
+import vlsiWorkspace from "./projects/vlsi-workspace.png";
 
 // Import tech logos
 import css from "./tech/css.png";
@@ -55,6 +56,7 @@ export {
   mhft,
   sketcher,
   CompileVortex,
+  vlsiWorkspace,
   logo,
   menu,
   close,

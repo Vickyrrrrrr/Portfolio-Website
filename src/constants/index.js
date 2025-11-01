@@ -20,6 +20,7 @@ import {
   mathwork,
   CompileVortex,
   eduskill,
+  vlsiWorkspace,
 } from "../assets";
 
 export const navLinks = [
@@ -60,7 +61,7 @@ export const experiences = [
     company_name: "First Year EC Engineering",
     icon: eduskill,
     iconBg: "#161329",
-    date: "2024 - Present",
+    date: "2025 - Present",
     points: [
       "Building foundational skills in Verilog for digital circuit design and hardware description.",
       "Learning MATLAB for signal processing, data analysis, and engineering computations.",
@@ -80,7 +81,7 @@ export const projects = [
       { name: "MATLAB", color: "green-text-gradient" },
       { name: "VLSI Design", color: "pink-text-gradient" },
     ],
-    image: weatherpedia,
+    image: vlsiWorkspace,
     source_code_link: "https://github.com/Vickyrrrrrr",
   },
 ];
