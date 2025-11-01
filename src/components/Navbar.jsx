@@ -63,18 +63,15 @@ const Navbar = () => {
             }}
           >
             <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-            <p className="text-white text-[20px] font-bold cursor-pointer flex items-center">
-              VICKY&nbsp;
-              <span className="sm:block hidden">NISHAD</span>
-            </p>
             <a 
               href="https://www.linkedin.com/in/vicky-nishad-117855369/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="ml-2 text-[#0A66C2] hover:text-[#004182] transition-colors"
+              className="text-white text-[20px] font-bold cursor-pointer flex items-center hover:text-[#0A66C2] transition-colors"
               onClick={(e) => e.stopPropagation()}
             >
-              <FaLinkedin size={24} />
+              VICKY&nbsp;
+              <span className="sm:block hidden">NISHAD</span>
             </a>
           </Link>
           {renderNavLinks(false)}
