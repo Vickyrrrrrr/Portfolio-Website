@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { close, logo, menu } from '../assets';
 import { navLinks } from '../constants';
 import { styles } from '../styles';
+import { FaLinkedin } from 'react-icons/fa';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
@@ -62,10 +63,19 @@ const Navbar = () => {
             }}
           >
             <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-            <p className="text-white text-[20px] font-bold cursor-pointer flex">
+            <p className="text-white text-[20px] font-bold cursor-pointer flex items-center">
               VICKY&nbsp;
               <span className="sm:block hidden">NISHAD</span>
             </p>
+            <a 
+              href="https://www.linkedin.com/in/vicky-nishad-117855369/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="ml-2 text-[#0A66C2] hover:text-[#004182] transition-colors"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <FaLinkedin size={24} />
+            </a>
           </Link>
           {renderNavLinks(false)}
           <div className="sm:hidden flex flex-1 justify-end items-center">
