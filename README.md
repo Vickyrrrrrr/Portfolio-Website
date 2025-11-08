@@ -47,7 +47,7 @@ mindmap
 
 ## 🚀 Demo
 
-Experience the live portfolio at [https://portfolio-lohit.vercel.app](https://vicky-nishad.vercel.app)  
+Experience the live portfolio at [https://vicky-nishad.vercel.app](https://vicky-nishad.vercel.app)  
 
 ## 🛠️ Installation
 
