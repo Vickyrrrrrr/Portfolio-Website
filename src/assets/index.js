@@ -17,6 +17,8 @@ import mhft from "./projects/mhft.png";
 import sketcher from "./projects/sketcher.png";
 import CompileVortex from "./projects/CompileVortex.png";
 import vlsiWorkspace from "./projects/vlsi-workspace.png";
+import nanosecondArbiter from "./projects/nanosecond-arbiter.png";
+import edunews from "./projects/edunews.png";
 
 // Import tech logos
 import css from "./tech/css.png";
@@ -57,6 +59,8 @@ export {
   sketcher,
   CompileVortex,
   vlsiWorkspace,
+  nanosecondArbiter,
+  edunews,
   logo,
   menu,
   close,

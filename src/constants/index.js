@@ -21,6 +21,8 @@ import {
   CompileVortex,
   eduskill,
   vlsiWorkspace,
+  nanosecondArbiter,
+  edunews,
 } from "../assets";
 
 export const navLinks = [
@@ -73,15 +75,29 @@ export const experiences = [
 
 export const projects = [
   {
-    name: "VLSI Projects Coming Soon",
+    name: "The Nanosecond Arbiter",
     description:
-      "Currently building foundational skills in Verilog and MATLAB. Exciting VLSI design projects are in development and will be showcased here soon.",
+      "Ultra-low latency lock-free HFT matching engine built with Rust. Achieves 19ns latency and 51M+ ops/sec throughput using atomic operations and zero-copy architecture. Production-grade high-frequency trading system with lock-free SPSC ring buffer.",
     tags: [
-      { name: "Verilog", color: "blue-text-gradient" },
-      { name: "MATLAB", color: "green-text-gradient" },
-      { name: "VLSI Design", color: "pink-text-gradient" },
+      { name: "Rust", color: "blue-text-gradient" },
+      { name: "VLSI", color: "green-text-gradient" },
+      { name: "HFT", color: "pink-text-gradient" },
+      { name: "Lock-Free", color: "orange-text-gradient" },
     ],
-    image: vlsiWorkspace,
-    source_code_link: "https://github.com/Vickyrrrrrr",
+    image: nanosecondArbiter,
+    source_code_link: "https://github.com/Vickyrrrrrr/nanosecond-arbiter",
+  },
+  {
+    name: "EduNews",
+    description:
+      "Modern educational news platform with real-time article streaming, smart notifications, and Firebase authentication. Built with Next.js 14, TypeScript, PostgreSQL, and TailwindCSS. Features infinite scroll, category filtering, bookmarks, and glassmorphism UI.",
+    tags: [
+      { name: "Next.js", color: "blue-text-gradient" },
+      { name: "TypeScript", color: "green-text-gradient" },
+      { name: "PostgreSQL", color: "pink-text-gradient" },
+      { name: "Firebase", color: "orange-text-gradient" },
+    ],
+    image: edunews,
+    source_code_link: "https://github.com/laxmiv101085-web/Edu-News",
   },
 ];
