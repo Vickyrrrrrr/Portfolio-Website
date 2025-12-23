@@ -101,7 +101,7 @@ export const projects = [
     ],
     image: edunews,
     source_code_link: "https://github.com/laxmiv101085-web/Edu-News",
-    live_demo_link: null,
+    live_demo_link: "https://educational-app-theta.vercel.app/",
   },
   {
     name: "SwasthQ",
