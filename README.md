@@ -16,6 +16,8 @@
 
 <p align="center">A modern, responsive portfolio website showcasing professional experience, projects, and skills. Built with React, Vite, and Tailwind CSS, featuring smooth animations and interactive 3D elements. ✨</p>
 
+<!-- Last Updated: December 24, 2025 - Projects: The Nanosecond Arbiter, EduNews -->
+
 </div>
 
 ## ✨ Features
