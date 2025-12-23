@@ -87,6 +87,7 @@ export const projects = [
     ],
     image: nanosecondArbiter,
     source_code_link: "https://github.com/Vickyrrrrrr/nanosecond-arbiter",
+    live_demo_link: null,
   },
   {
     name: "EduNews",
@@ -100,6 +101,7 @@ export const projects = [
     ],
     image: edunews,
     source_code_link: "https://github.com/laxmiv101085-web/Edu-News",
+    live_demo_link: null,
   },
   {
     name: "SwasthQ",
@@ -113,5 +115,6 @@ export const projects = [
     ],
     image: swasthq,
     source_code_link: "https://github.com/Vickyrrrrrr/SwasthQ",
+    live_demo_link: "https://swasthqueue.vercel.app/",
   },
 ];
