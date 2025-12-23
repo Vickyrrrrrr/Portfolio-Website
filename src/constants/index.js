@@ -23,6 +23,7 @@ import {
   vlsiWorkspace,
   nanosecondArbiter,
   edunews,
+  swasthq,
 } from "../assets";
 
 export const navLinks = [
@@ -99,5 +100,18 @@ export const projects = [
     ],
     image: edunews,
     source_code_link: "https://github.com/laxmiv101085-web/Edu-News",
+  },
+  {
+    name: "SwasthQ",
+    description:
+      "Smart healthcare queue management system powered by Gemini AI. Features Aadhaar OCR scanning, real-time queue tracking, hospital kiosk interface, and doctor dashboard. Built with Next.js, Firebase, and Google AI for intelligent patient flow optimization.",
+    tags: [
+      { name: "Next.js", color: "blue-text-gradient" },
+      { name: "Gemini AI", color: "green-text-gradient" },
+      { name: "Firebase", color: "pink-text-gradient" },
+      { name: "Healthcare", color: "orange-text-gradient" },
+    ],
+    image: swasthq,
+    source_code_link: "https://github.com/Vickyrrrrrr/SwasthQ",
   },
 ];

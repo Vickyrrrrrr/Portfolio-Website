@@ -19,6 +19,7 @@ import CompileVortex from "./projects/CompileVortex.png";
 import vlsiWorkspace from "./projects/vlsi-workspace.png";
 import nanosecondArbiter from "./projects/nanosecond-arbiter.png";
 import edunews from "./projects/edunews.png";
+import swasthq from "./projects/swasthq.png";
 
 // Import tech logos
 import css from "./tech/css.png";
@@ -65,4 +66,5 @@ export {
   menu,
   close,
   eduskill,
+  swasthq,
 };
