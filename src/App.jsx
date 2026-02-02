@@ -11,17 +11,19 @@ const App = () => {
       }}
     >
       <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+        <div className="fixed inset-0 z-0">
+          <StarsCanvas />
+        </div>
+        <div className="relative z-10">
           <Navbar />
           <Hero />
         </div>
-        <About />
-        <Experience />
-        <Tech />
-        <Works />
-        <div className="relative z-0">
+        <div className="relative z-10">
+          <About />
+          <Experience />
+          <Tech />
+          <Works />
           <Contact />
-          <StarsCanvas />
         </div>
       </div>
     </BrowserRouter>

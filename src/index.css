@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,9 +8,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
+}
+
+::selection {
+  background: #2a2a2a;
+  /* Subtle dark selection */
+  color: #fff;
 }
 
 .hash-span {
@@ -20,7 +26,8 @@
 }
 
 .gradient {
-  background: #000000; /* fallback for old browsers */
+  background: #000000;
+  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #434343, #000000);
   background: linear-gradient(to right, #434343, #000000);
 }
@@ -52,32 +59,43 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity by modifying the last value (0.5 in this case) */
-  z-index: 9999; /* Adjust the z-index to ensure it's displayed above other elements if necessary */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Adjust the opacity by modifying the last value (0.5 in this case) */
+  z-index: 9999;
+  /* Adjust the z-index to ensure it's displayed above other elements if necessary */
 }
 
 @keyframes spin {
-  0%, 100% {
+
+  0%,
+  100% {
     /* Box shadow styles */
   }
+
   12.5% {
     /* Box shadow styles */
   }
+
   25% {
     /* Box shadow styles */
   }
+
   37.5% {
     /* Box shadow styles */
   }
+
   50% {
     /* Box shadow styles */
   }
+
   62.5% {
     /* Box shadow styles */
   }
+
   75% {
     /* Box shadow styles */
   }
+
   87.5% {
     /* Box shadow styles */
   }
@@ -115,14 +133,16 @@
 }
 
 .input {
-  background: #333; /* Background color */
+  background: #333;
+  /* Background color */
   padding: 16px 24px;
   color: #fff;
   border: none;
   border-radius: 8px;
   outline: none;
   font-weight: 600;
-  placeholder-color: #999; /* Placeholder text color */
+  placeholder-color: #999;
+  /* Placeholder text color */
 }
 
 .input-error {
@@ -130,15 +150,32 @@
 }
 
 .submit-button {
-  background: #c0c0c0; /* Background color */
+  background: #c0c0c0;
+  /* Background color */
   padding: 12px 24px;
   border-radius: 16px;
   outline: none;
   color: #fff;
   font-weight: 600;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for the button */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* Box shadow for the button */
 }
 
-.confirmation {
-  color: #00ff00;
+
+/* Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
 }

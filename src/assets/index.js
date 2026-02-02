@@ -20,6 +20,8 @@ import vlsiWorkspace from "./projects/vlsi-workspace.png";
 import nanosecondArbiter from "./projects/nanosecond-arbiter.png";
 import edunews from "./projects/edunews.png";
 import swasthq from "./projects/swasthq.png";
+import buildstack from "./projects/buildstack.png";
+import dawakhana from "./projects/dawakhana.jpg";
 
 // Import tech logos
 import css from "./tech/css.png";
@@ -67,4 +69,6 @@ export {
   close,
   eduskill,
   swasthq,
+  buildstack,
+  dawakhana,
 };

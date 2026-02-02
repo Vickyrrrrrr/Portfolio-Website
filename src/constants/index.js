@@ -24,6 +24,8 @@ import {
   nanosecondArbiter,
   edunews,
   swasthq,
+  buildstack,
+  dawakhana,
 } from "../assets";
 
 export const navLinks = [
@@ -49,6 +51,10 @@ export const services = [
 ];
 
 export const technologies = [
+  { name: "Python", icon: python },
+  { name: "C++", icon: cpp },
+  { name: "Java", icon: java },
+  { name: "C", icon: c },
   { name: "HTML 5", icon: html },
   { name: "CSS 3", icon: css },
   { name: "JavaScript", icon: javascript },
@@ -116,5 +122,33 @@ export const projects = [
     image: swasthq,
     source_code_link: "https://github.com/Vickyrrrrrr/SwasthQ",
     live_demo_link: "https://swasthqueue.vercel.app/",
+  },
+  {
+    name: "Buildstack",
+    description:
+      "A comprehensive development platform built with Next.js 16 and Firebase. Features secure authentication via NextAuth and modern UI components using Lucide React.",
+    tags: [
+      { name: "Next.js 16", color: "blue-text-gradient" },
+      { name: "Firebase", color: "green-text-gradient" },
+      { name: "NextAuth", color: "pink-text-gradient" },
+      { name: "TailwindCSS", color: "orange-text-gradient" },
+    ],
+    image: buildstack,
+    source_code_link: "https://github.com/Vickyrrrrrr/buildstack",
+    live_demo_link: null,
+  },
+  {
+    name: "Dawakhana",
+    description:
+      "An online pharmacy and healthcare platform built with Next.js 16. Integrates Razorpay for secure payments and Firebase for backend services, featuring smooth animations with Framer Motion.",
+    tags: [
+      { name: "Next.js 16", color: "blue-text-gradient" },
+      { name: "Razorpay", color: "green-text-gradient" },
+      { name: "Firebase", color: "pink-text-gradient" },
+      { name: "Framer Motion", color: "orange-text-gradient" },
+    ],
+    image: dawakhana,
+    source_code_link: "https://github.com/Vickyrrrrrr/dawakhana",
+    live_demo_link: null,
   },
 ];

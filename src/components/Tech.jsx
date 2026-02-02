@@ -12,7 +12,7 @@ const renderTechnologies = () => {
 };
 
 const Tech = () => (
-  <div className="flex flex-row flex-wrap justify-center gap-10">
+  <div className="flex flex-row flex-wrap justify-center gap-5 sm:gap-10">
     {renderTechnologies()}
   </div>
 );

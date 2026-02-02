@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#050816',
-        secondary: '#aaa6c3',
-        tertiary: '#151030',
-        'black-100': '#100d25',
+        primary: '#050505', // True Matte Black
+        secondary: '#c0c0c0', // Premium Silver
+        tertiary: '#0f0f0f', // Card Background
+        'black-100': '#1a1a1a',
         'black-200': '#090325',
         'white-100': '#f3f3f3',
       },
