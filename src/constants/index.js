@@ -102,7 +102,7 @@ export const projects = [
     ],
     image: agentic,
     source_code_link: "#", // No link for private project
-    live_demo_link: null,
+    live_demo_link: "https://agentic.buildstack.live/",
   },
   {
     name: "The Nanosecond Arbiter",
