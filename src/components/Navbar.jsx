@@ -27,6 +27,24 @@ const Navbar = () => {
     window.open(resumeUrl);
   };
 
+  const handleScrollTo = (id) => {
+    setActive(id);
+    setToggle(false);
+
+    // Always fall back to native if lenis isn't ready, but try explicit element targeting first
+    const targetElement = document.getElementById(id.toLowerCase());
+
+    if (targetElement) {
+      if (window.lenis) {
+        window.lenis.scrollTo(targetElement, { offset: -50, duration: 1.5, lock: false });
+      } else {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      console.warn(`Could not find section with id: ${id}`);
+    }
+  };
+
   return (
     <nav
       className={`w-full flex items-center py-4 fixed top-0 z-20 transition-all duration-300 ${scrolled ? 'bg-primary/80 backdrop-blur-md shadow-sm' : 'bg-transparent'
@@ -38,7 +56,11 @@ const Navbar = () => {
           className="flex items-center gap-2"
           onClick={() => {
             setActive('');
-            window.scrollTo(0, 0);
+            if (window.lenis) {
+              window.lenis.scrollTo(0, { duration: 1.5 });
+            } else {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
           }}
         >
           <img src={logo} alt="logo" className="w-12 h-12 object-contain" />
@@ -61,11 +83,7 @@ const Navbar = () => {
                 href={`#${link.id}`}
                 onClick={(e) => {
                   e.preventDefault();
-                  if (window.lenis) {
-                    window.lenis.scrollTo(`#${link.id}`, { offset: -50, duration: 1.5 });
-                  } else {
-                    document.getElementById(link.id)?.scrollIntoView({ behavior: 'smooth' });
-                  }
+                  handleScrollTo(link.id);
                 }}
               >{link.title}</a>
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-white transition-all group-hover:w-full"></span>
@@ -96,21 +114,12 @@ const Navbar = () => {
                   key={link.id}
                   className={`${active === link.title ? 'text-white' : 'text-secondary'
                     } font-medium cursor-pointer text-[16px]`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(link.title);
-                  }}
                 >
                   <a
                     href={`#${link.id}`}
                     onClick={(e) => {
                       e.preventDefault();
-                      setToggle(false);
-                      if (window.lenis) {
-                        window.lenis.scrollTo(`#${link.id}`, { offset: -50, duration: 1.5 });
-                      } else {
-                        document.getElementById(link.id)?.scrollIntoView({ behavior: 'smooth' });
-                      }
+                      handleScrollTo(link.id);
                     }}
                   >{link.title}</a>
                 </li>
