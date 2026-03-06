@@ -26,6 +26,8 @@ import {
   swasthq,
   buildstack,
   dawakhana,
+  claude,
+  agentic,
 } from "../assets";
 
 export const navLinks = [
@@ -51,6 +53,7 @@ export const services = [
 ];
 
 export const technologies = [
+  { name: "Claude API", icon: claude },
   { name: "Python", icon: python },
   { name: "C++", icon: cpp },
   { name: "Java", icon: java },
@@ -66,21 +69,47 @@ export const technologies = [
 
 export const experiences = [
   {
-    title: "Electronics & Communication Student",
-    company_name: "First Year EC Engineering",
-    icon: eduskill,
-    iconBg: "#161329",
-    date: "2025 - Present",
+    title: "Tech Enthusiast & Self-Taught Developer",
+    company_name: "Independent Research & Development",
+    icon: "dot", // We'll handle this string in Experience.jsx to render a dot
+    iconBg: "#faf9f6",
+    date: "2023 - Present",
     points: [
-      "Building foundational skills in Verilog for digital circuit design and hardware description.",
-      "Learning MATLAB for signal processing, data analysis, and engineering computations.",
+      "Continuously learning and researching advanced technologies independently since 2023.",
+      "Architecting and building complete end-to-end tools for SKY130 PDK tapeout-ready chips.",
+      "Dedicated deep research, reading extensive documentation and research papers before initiating the build process since October.",
+      "Focused on creating robust, error-free hardware logic utilizing cutting edge AI workflows."
+    ],
+  },
+  {
+    title: "Electronics & Communication Student",
+    company_name: "University of Lucknow",
+    icon: "lucknow", // We'll handle this in Experience.jsx or provide a text fallback
+    iconBg: "#faf9f6",
+    date: "2024 - Present",
+    points: [
+      "Currently pursuing B.Tech in Electronics and Communication Engineering.",
+      "Building foundational skills in digital circuit design and hardware description.",
       "Exploring VLSI design principles with a goal to contribute high-impact solutions in the field.",
-      "Developing creative skills in video editing and music production alongside core engineering studies.",
     ],
   },
 ];
 
 export const projects = [
+  {
+    name: "AgentIC (Private / IP Protected)",
+    description:
+      "A robust, automated chip design ecosystem built entirely by Claude 3.5 Sonnet. Designed to generate error-free, tapeout-ready logic and layouts for VLSI. (Note: Repository is currently private to protect Intellectual Property).",
+    tags: [
+      { name: "Claude 3.5 Sonnet", color: "orange-text-gradient" },
+      { name: "Agentic AI", color: "blue-text-gradient" },
+      { name: "VLSI", color: "green-text-gradient" },
+      { name: "Tapeout-Ready", color: "pink-text-gradient" },
+    ],
+    image: agentic,
+    source_code_link: "#", // No link for private project
+    live_demo_link: null,
+  },
   {
     name: "The Nanosecond Arbiter",
     description:
@@ -112,10 +141,10 @@ export const projects = [
   {
     name: "SwasthQ",
     description:
-      "AI-powered healthcare queue management system built with Gemini API. Features smart patient registration, real-time queue tracking, hospital kiosk integration, and doctor's dashboard. Streamlines OPD workflows with intelligent data management.",
+      "AI-powered healthcare queue management system utilizing advanced Agentic Workflows. Features smart patient registration, real-time queue tracking, hospital kiosk integration, and doctor's dashboard. Streamlines OPD workflows with intelligent data management.",
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
-      { name: "Gemini AI", color: "green-text-gradient" },
+      { name: "Agentic AI", color: "green-text-gradient" },
       { name: "Healthcare", color: "pink-text-gradient" },
       { name: "Firebase", color: "orange-text-gradient" },
     ],

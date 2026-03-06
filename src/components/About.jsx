@@ -29,13 +29,14 @@ const About = () => {
 
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] font-sans"
+        className="mt-6 text-secondary text-[17px] max-w-3xl leading-[32px] font-sans"
       >
-        I'm Vicky Nishad, a driven First-Year Electronics and Communication (EC) Engineering student
-        deeply passionate about the intersection of hardware and advanced software systems.
-        I specialize in **Agentic AI** systems and large language models (LLMs), including the development of platforms like **AgentIC** where autonomous agents execute complex workflows.
-        Alongside building scalable Full-Stack applications, I am exploring core engineering concepts in Verilog and MATLAB.
-        My goal is to leverage advanced AI algorithms and solid engineering principles to create high-impact, research-driven solutions.
+        I'm Vicky Nishad, an Electronics and Communication Engineering student and a deeply passionate <strong>AI Community Builder</strong>.
+        I firmly believe in Anthropic's mission to develop <strong>Helpful, Honest, and Harmless (HHH) AI</strong>, which is the guiding philosophy behind my work.
+        <br /><br />
+        I specialize in utilizing the <strong>Claude API</strong> and advanced Agentic AI systems to build robust tools. Most notably, I developed <strong>AgentIC</strong>—an automated, tapeout-ready VLSI logic ecosystem built entirely with Claude 3.5 Sonnet.
+        <br /><br />
+        Beyond engineering scalable full-stack applications and exploring hardware design, my ultimate goal is to lead student-driven AI initiatives on campus, organize technical workshops, and empower fellow builders to integrate state-of-the-art AI responsibly.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

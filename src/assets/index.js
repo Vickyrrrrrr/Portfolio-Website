@@ -22,6 +22,8 @@ import edunews from "./projects/edunews.png";
 import swasthq from "./projects/swasthq.png";
 import buildstack from "./projects/buildstack.png";
 import dawakhana from "./projects/dawakhana.jpg";
+import agentic from "./projects/agentic.png";
+import claude from "./claude.svg";
 
 // Import tech logos
 import css from "./tech/css.png";
@@ -71,4 +73,6 @@ export {
   swasthq,
   buildstack,
   dawakhana,
+  agentic,
+  claude,
 };

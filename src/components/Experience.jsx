@@ -27,11 +27,17 @@ const ExperienceCard = ({ experience }) => (
     iconStyle={{ background: experience.iconBg, boxShadow: "0 0 0 4px #faf9f6" }}
     icon={
       <div className="flex justify-center items-center w-full h-full">
-        <img
-          src={experience.icon}
-          alt={experience.company_name}
-          className="w-[60%] h-[60%] object-contain"
-        />
+        {experience.icon === "dot" ? (
+          <div className="w-3 h-3 rounded-full bg-black-200"></div>
+        ) : experience.icon === "lucknow" ? (
+          <span className="text-black-100 font-bold font-serif text-[12px]">LU</span>
+        ) : (
+          <img
+            src={experience.icon}
+            alt={experience.company_name}
+            className="w-[60%] h-[60%] object-contain"
+          />
+        )}
       </div>
     }
   >
