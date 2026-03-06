@@ -4,9 +4,9 @@ import { styles } from "../styles";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-[60vh] mx-auto flex flex-col justify-center">
+    <section className="relative w-full h-[70vh] md:h-[60vh] min-h-[450px] mx-auto flex flex-col justify-center">
       <div className={`max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 z-10 pointer-events-none`}>
-        <div className="pointer-events-auto mt-[-100px]">
+        <div className="pointer-events-auto mt-[-50px] md:mt-[-100px]">
           <motion.h1
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -29,7 +29,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-10">
+      <div className="absolute bottom-5 md:bottom-10 w-full flex justify-center items-center z-10">
         <a href="#about" aria-label="Scroll down">
           <motion.div
             animate={{
