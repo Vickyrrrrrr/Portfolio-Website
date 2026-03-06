@@ -29,6 +29,26 @@ const Hero = () => {
         </div>
       </div>
 
+      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-10">
+        <a href="#about" aria-label="Scroll down">
+          <motion.div
+            animate={{
+              y: [0, 15, 0],
+              opacity: [0.4, 1, 0.4],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="text-accent hover:text-secondary transition-colors cursor-pointer"
+          >
+            <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </motion.div>
+        </a>
+      </div>
     </section>
   );
 };
