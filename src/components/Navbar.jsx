@@ -41,7 +41,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-[50px] h-[50px] object-cover rounded-full border border-gray-200 shadow-sm" />
+          <img src={logo} alt="logo" className="w-12 h-12 object-contain" />
           <p className="text-black-100 text-[20px] font-bold cursor-pointer flex font-serif">
             VICKY &nbsp;
             <span className="sm:block hidden font-medium">NISHAD</span>
@@ -57,7 +57,17 @@ const Navbar = () => {
                 } hover:text-white text-[16px] font-medium cursor-pointer transition-colors relative group`}
               onClick={() => setActive(link.title)}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              <a
+                href={`#${link.id}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (window.lenis) {
+                    window.lenis.scrollTo(`#${link.id}`, { offset: -50, duration: 1.5 });
+                  } else {
+                    document.getElementById(link.id)?.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >{link.title}</a>
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-white transition-all group-hover:w-full"></span>
             </li>
           ))}
@@ -91,7 +101,18 @@ const Navbar = () => {
                     setActive(link.title);
                   }}
                 >
-                  <a href={`#${link.id}`}>{link.title}</a>
+                  <a
+                    href={`#${link.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setToggle(false);
+                      if (window.lenis) {
+                        window.lenis.scrollTo(`#${link.id}`, { offset: -50, duration: 1.5 });
+                      } else {
+                        document.getElementById(link.id)?.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                  >{link.title}</a>
                 </li>
               ))}
               <li className="text-secondary font-medium cursor-pointer text-[16px]">
