@@ -11,9 +11,9 @@ const ServiceCard = ({ index, title, icon }) => (
       variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
       className="w-full bg-white border border-gray-200 p-[1px] rounded-[12px] shadow-sm hover:shadow-md transition-shadow duration-300"
     >
-      <div className="bg-white rounded-[12px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
-        <img src={icon} alt="web-development" className="w-16 h-16 object-contain filter invert opacity-80" loading="lazy" />
-        <h3 className="text-black-100 text-[18px] font-semibold text-center font-serif">{title}</h3>
+      <div className="bg-white rounded-[12px] py-5 px-6 min-h-[280px] flex justify-evenly items-center flex-col">
+        <img src={icon} alt={title} className="w-full h-[120px] object-cover rounded-lg shadow-sm" loading="lazy" />
+        <h3 className="text-black-100 text-[18px] font-semibold text-center font-serif mt-4">{title}</h3>
       </div>
     </motion.div>
   </div>
