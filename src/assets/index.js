@@ -1,7 +1,7 @@
 import mathwork from "./company/mathwork.png";
 import edunet from "./company/edunet.png";
 import eduskill from "./company/eduskill.png";
-import lucknow from "./company/lucknow.png";
+import lucknow from "./company/lucknow.jpg";
 
 // Import tech stack images
 import python from "./tech-stack/python.png";
