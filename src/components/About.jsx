@@ -1,31 +1,22 @@
 import { motion } from 'framer-motion';
 import React from 'react';
-import { Tilt } from 'react-tilt';
 import { services } from '../constants';
 import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
 import { fadeIn, textVariant } from '../utils/motion';
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className="xs:w-[250px] w-full">
+  <div className="xs:w-[250px] w-full">
     <motion.div
       variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
-      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+      className="w-full bg-white border border-gray-200 p-[1px] rounded-[12px] shadow-sm hover:shadow-md transition-shadow duration-300"
     >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-      >
-        <img src={icon} alt="web-development" className="w-16 h-16 object-contain" loading="lazy" />
-
-        <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
+      <div className="bg-white rounded-[12px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
+        <img src={icon} alt="web-development" className="w-16 h-16 object-contain filter invert opacity-80" loading="lazy" />
+        <h3 className="text-black-100 text-[18px] font-semibold text-center font-serif">{title}</h3>
       </div>
     </motion.div>
-  </Tilt>
+  </div>
 );
 
 const About = () => {
@@ -38,14 +29,13 @@ const About = () => {
 
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] font-sans"
       >
         I'm Vicky Nishad, a driven First-Year Electronics and Communication (EC) Engineering student
-        deeply passionate about the world of technology. I am currently building foundational skills
-        in Verilog and MATLAB with a clear goal: to contribute high-impact solutions in the VLSI field.
-        Beyond core engineering, I actively explore my creativity through learning video editing and
-        music production. I am focused on leveraging my technical knowledge to eventually develop
-        projects that benefit the masses.
+        deeply passionate about the intersection of hardware and advanced software systems.
+        I specialize in **Agentic AI** systems and large language models (LLMs), including the development of platforms like **AgentIC** where autonomous agents execute complex workflows.
+        Alongside building scalable Full-Stack applications, I am exploring core engineering concepts in Verilog and MATLAB.
+        My goal is to leverage advanced AI algorithms and solid engineering principles to create high-impact, research-driven solutions.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

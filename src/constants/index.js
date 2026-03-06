@@ -135,7 +135,7 @@ export const projects = [
     ],
     image: buildstack,
     source_code_link: "https://github.com/Vickyrrrrrr/buildstack",
-    live_demo_link: null,
+    live_demo_link: "https://www.buildstack.live/",
   },
   {
     name: "Dawakhana",
@@ -149,6 +149,6 @@ export const projects = [
     ],
     image: dawakhana,
     source_code_link: "https://github.com/Vickyrrrrrr/dawakhana",
-    live_demo_link: null,
+    live_demo_link: "https://dawakhana.netlify.app/",
   },
 ];

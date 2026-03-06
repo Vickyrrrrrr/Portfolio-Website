@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { About, Contact, Experience, Hero, Navbar, StarsCanvas, Tech, Works } from './components';
+import { About, Contact, Experience, Hero, Navbar, Tech, Works } from './components';
 
 const App = () => {
   return (
@@ -10,12 +10,11 @@ const App = () => {
         v7_relativeSplatPath: true,
       }}
     >
-      <div className="relative z-0 bg-primary">
-        <div className="fixed inset-0 z-0">
-          <StarsCanvas />
+      <div className="relative z-0 bg-primary min-h-screen">
+        <div className="relative z-10 border-b border-gray-200">
+          <Navbar />
         </div>
         <div className="relative z-10">
-          <Navbar />
           <Hero />
         </div>
         <div className="relative z-10">

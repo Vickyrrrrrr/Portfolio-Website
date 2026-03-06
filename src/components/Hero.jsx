@@ -4,26 +4,26 @@ import { styles } from "../styles";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto flex flex-col justify-center">
+    <section className="relative w-full h-[80vh] mx-auto flex flex-col justify-center">
       <div className={`max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 z-10 pointer-events-none`}>
-        <div className="pointer-events-auto">
+        <div className="pointer-events-auto mt-[-100px]">
           <motion.h1
-            initial={{ x: -100, opacity: 0, scale: 0.5 }}
-            animate={{ x: 0, opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-            className={`${styles.heroHeadText} text-white font-bold`}
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className={`${styles.heroHeadText} font-serif tracking-tight`}
           >
-            Hi, I'm <span className="text-[#c0c0c0]">Vicky</span>
+            Hi, I'm <span className="text-accent italic">Vicky</span>
           </motion.h1>
           <motion.div
-            initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-            className={`${styles.heroSubText} mt-2 text-white-100 max-w-2xl`}
+            className={`${styles.heroSubText} mt-4 max-w-2xl text-secondary`}
           >
             I develop <br className="sm:block hidden" />
-            <span className="text-secondary inline-block sm:min-w-[300px] min-w-[200px]">
-              <TypewriterEffect texts={["Full Stack Applications", "High-Performance Systems", "AI & ML Solutions", "Interactive Web Experiences"]} />
+            <span className="font-semibold text-black-100 inline-block sm:min-w-[400px] min-w-[200px]">
+              <TypewriterEffect texts={["Full Stack Applications", "High-Performance Systems", "Agentic AI / AgentIC Solutions", "Interactive Web Experiences"]} />
             </span>
           </motion.div>
         </div>
@@ -31,7 +31,7 @@ const Hero = () => {
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-10">
         <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-2 border-secondary/30 flex justify-center items-start p-2 hover:border-white transition-colors">
+          <div className="w-[35px] h-[64px] rounded-3xl border-2 border-secondary flex justify-center items-start p-2 hover:border-accent transition-colors">
             <motion.div
               animate={{
                 y: [0, 24, 0],
@@ -41,7 +41,7 @@ const Hero = () => {
                 repeat: Infinity,
                 repeatType: "loop",
               }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
+              className="w-2 h-2 rounded-full bg-secondary mb-1"
             />
           </div>
         </a>
@@ -76,7 +76,7 @@ const TypewriterEffect = ({ texts }) => {
 
     const timeout = setTimeout(() => {
       setSubIndex((prev) => prev + (reverse ? -1 : 1));
-    }, Math.max(reverse ? 50 : subIndex === texts[index].length ? 1500 : 100, parseInt(Math.random() * 50)));
+    }, Math.max(reverse ? 50 : subIndex === texts[index].length ? 1500 : 80, parseInt(Math.random() * 50)));
 
     return () => clearTimeout(timeout);
   }, [subIndex, index, reverse, texts]);
@@ -90,9 +90,9 @@ const TypewriterEffect = ({ texts }) => {
   }, []);
 
   return (
-    <span className="font-bold text-[#00f2ea]">
+    <span className="font-semibold text-black-100">
       {texts[index % texts.length].substring(0, subIndex)}
-      <span className={`${blink ? "opacity-100" : "opacity-0"}`}>|</span>
+      <span className={`${blink ? "opacity-100 text-accent font-light" : "opacity-0"} ml-1`}>|</span>
     </span>
   );
 };

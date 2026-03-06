@@ -12,44 +12,42 @@ const ProjectCard = ({ name, description, tags, image, source_code_link, live_de
   return (
     <motion.div variants={fadeIn("up", "spring")}>
       <motion.div
-        whileHover={{ y: -10 }}
-        transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full border border-white/5 hover:border-white/20 hover:shadow-2xl transition-all duration-300"
+        className="bg-white p-5 rounded-[12px] sm:w-[360px] w-full border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
       >
         <div className="relative w-full h-[230px]">
           <img
             src={image}
             alt="project_image"
-            className="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-500"
+            className="w-full h-full object-cover rounded-[12px] hover:opacity-90 transition-all duration-500"
           />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover gap-2">
             {live_demo_link && (
               <div
                 onClick={() => window.open(live_demo_link, "_blank")}
-                className="bg-black/50 backdrop-blur-sm w-10 h-10 rounded-full flex justify-center items-center cursor-pointer border border-white/20 hover:bg-black/80 transition-all"
+                className="bg-white/90 backdrop-blur-sm w-10 h-10 rounded-full flex justify-center items-center cursor-pointer border border-gray-200 hover:bg-white transition-all shadow-sm"
                 title="Live Demo"
               >
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-black-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </div>
             )}
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className="bg-black/50 backdrop-blur-sm w-10 h-10 rounded-full flex justify-center items-center cursor-pointer border border-white/20 hover:bg-black/80 transition-all"
+              className="bg-white/90 backdrop-blur-sm w-10 h-10 rounded-full flex justify-center items-center cursor-pointer border border-gray-200 hover:bg-white transition-all shadow-sm"
               title="Source Code"
             >
-              <img src={github} alt="source code" className="w-1/2 h-1/2 object-contain" />
+              <img src={github} alt="source code" className="w-1/2 h-1/2 object-contain filter invert opacity-80" />
             </div>
           </div>
         </div>
         <div className="mt-5">
-          <h3 className="text-white font-bold text-[22px] tracking-tight">{name}</h3>
+          <h3 className="text-black-100 font-bold text-[20px] font-serif tracking-tight">{name}</h3>
           <p className="mt-2 text-secondary text-[14px] leading-relaxed line-clamp-3">{description}</p>
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <p key={tag.name} className={`text-[12px] font-medium opacity-80 ${tag.color}`}>
+            <p key={tag.name} className={`text-[12px] font-medium opacity-80 text-secondary`}>
               #{tag.name}
             </p>
           ))}
