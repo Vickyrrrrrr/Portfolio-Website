@@ -42,7 +42,7 @@ const Contact = () => {
       ),
     },
     {
-      href: "https://www.linkedin.com/in/vicky-nishad",
+      href: "https://www.linkedin.com/in/vicky-nishad-117855369/",
       label: "LinkedIn",
       hoverColor: "bg-blue-100",
       icon: (
