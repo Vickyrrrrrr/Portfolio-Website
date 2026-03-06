@@ -25,6 +25,10 @@ import dawakhana from "./projects/dawakhana.jpg";
 import agentic from "./projects/agentic.png";
 import claude from "./claude.svg";
 
+// Import service logos
+import videoEditing from "./services/video-editing.png";
+import musicProduction from "./services/music-production.png";
+
 // Import tech logos
 import css from "./tech/css.png";
 import git from "./tech/git.png";
@@ -75,4 +79,6 @@ export {
   dawakhana,
   agentic,
   claude,
+  videoEditing,
+  musicProduction,
 };

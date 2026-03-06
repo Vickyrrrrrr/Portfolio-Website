@@ -28,6 +28,8 @@ import {
   dawakhana,
   claude,
   agentic,
+  videoEditing,
+  musicProduction,
 } from "../assets";
 
 export const navLinks = [
@@ -48,8 +50,8 @@ export const navLinks = [
 export const services = [
   { title: "Verilog", icon: cpp },
   { title: "MATLAB", icon: python },
-  { title: "Video Editing", icon: java },
-  { title: "Music Production", icon: c },
+  { title: "Video Editing", icon: videoEditing },
+  { title: "Music Production", icon: musicProduction },
 ];
 
 export const technologies = [
