@@ -41,8 +41,8 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-black-100 text-[18px] font-bold cursor-pointer flex font-serif">
+          <img src={logo} alt="logo" className="w-[50px] h-[50px] object-cover rounded-full border border-gray-200 shadow-sm" />
+          <p className="text-black-100 text-[20px] font-bold cursor-pointer flex font-serif">
             VICKY &nbsp;
             <span className="sm:block hidden font-medium">NISHAD</span>
           </p>
