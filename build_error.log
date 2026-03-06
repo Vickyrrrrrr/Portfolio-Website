@@ -1,0 +1,43 @@
+﻿
+> Portfolio-Website@0.0.0 build
+> vite build
+
+[36mvite v4.5.5 [32mbuilding for production...[36m[39m
+transforming...
+node.exe : Browserslist: browsers data 
+(caniuse-lite) is 15 months old. Please run:
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" 
+"C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (B 
+   rowserslist: b...ld. Please run::String) [  
+  ], RemoteException
+    + FullyQualifiedErrorId : NativeCommandErr 
+   or
+ 
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://githu
+b.com/browserslist/update-db#readme
+[32mΓ£ô[39m 66 modules transformed.
+[32mΓ£ô built in 770ms[39m
+[31mCould not resolve 
+"./projects/WeatherPedia.png" from 
+"src/assets/index.js"[39m
+file: [36mC:/Documents/GitHub/Portfolio-Websit
+e/src/assets/index.js[39m
+[31merror during build:
+RollupError: Could not resolve 
+"./projects/WeatherPedia.png" from 
+"src/assets/index.js"
+    at error (file:///C:/Documents/GitHub/Portf
+olio-Website/node_modules/rollup/dist/es/shared
+/node-entry.js:2287:30)
+    at ModuleLoader.handleInvalidResolvedId (fi
+le:///C:/Documents/GitHub/Portfolio-Website/nod
+e_modules/rollup/dist/es/shared/node-entry.js:2
+4860:24)
+    at file:///C:/Documents/GitHub/Portfolio-We
+bsite/node_modules/rollup/dist/es/shared/node-e
+ntry.js:24822:26[39m

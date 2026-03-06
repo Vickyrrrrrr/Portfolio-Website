@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +25,7 @@
             margin: 0 auto;
             background: white;
             padding: 40px 50px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         /* Header */
@@ -192,25 +193,57 @@
             text-decoration: none;
         }
 
+        /* Print button */
+        .print-btn {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .print-btn button {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: #1a1a2e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s;
+        }
+
+        .print-btn button:hover {
+            background: #6c63ff;
+        }
+
         /* Print styles */
         @media print {
             body {
                 background: white;
                 padding: 0;
             }
+
             .resume {
                 box-shadow: none;
                 padding: 20px 30px;
             }
+
+            .print-btn {
+                display: none;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="resume">
+        <div class="print-btn">
+            <button onclick="window.print()">🖨️ Print / Save as PDF</button>
+        </div>
         <!-- Header -->
         <header class="header">
             <h1 class="name">VICKY NISHAD</h1>
-            <p class="tagline">Vibe Coder • Electronics & Communication Engineer • Full-Stack Developer</p>
+            <p class="tagline">AI Community Builder • Agentic AI Developer • Electronics & Communication Engineer</p>
             <p class="contact-info">
                 <a href="mailto:vickynishad@gmail.com">vickynishad@gmail.com</a>
                 <span>|</span>
@@ -226,9 +259,11 @@
         <section class="section">
             <h2 class="section-title">Summary</h2>
             <p class="summary">
-                First-year Electronics & Communication Engineering student with a passion for building high-performance systems and modern web applications. 
-                Experienced in developing ultra-low latency systems with Rust, AI-powered applications with Gemini API, and full-stack web platforms. 
-                A vibe coder who believes in clean code, minimal design, and shipping products that users love.
+                Electronics and Communication Engineering student and deeply passionate AI Community Builder.
+                Specializing in utilizing the Claude API and advanced Agentic AI systems to build robust tools,
+                including an automated, tapeout-ready VLSI logic ecosystem built entirely with Claude 3.5 Sonnet.
+                Dedicated to clean code, minimal design, and developing Helpful, Honest, and Harmless (HHH) AI
+                architectures.
             </p>
         </section>
 
@@ -237,7 +272,8 @@
             <h2 class="section-title">Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <strong>Languages:</strong> <span>Rust, JavaScript, TypeScript, Python, Verilog, MATLAB, C/C++</span>
+                    <strong>Languages:</strong> <span>Rust, JavaScript, TypeScript, Python, Verilog, MATLAB,
+                        C/C++</span>
                 </div>
                 <div class="skill-category">
                     <strong>Frontend:</strong> <span>React.js, Next.js, Tailwind CSS, Three.js, Framer Motion</span>
@@ -246,7 +282,7 @@
                     <strong>Backend:</strong> <span>Node.js, PostgreSQL, Firebase, REST APIs</span>
                 </div>
                 <div class="skill-category">
-                    <strong>Tools:</strong> <span>Git, Vercel, VS Code, Gemini AI API</span>
+                    <strong>Tools:</strong> <span>Git, Vercel, VS Code, Claude API, Agentic AI</span>
                 </div>
                 <div class="skill-category">
                     <strong>Hardware:</strong> <span>Verilog, VLSI Design, Digital Circuit Design</span>
@@ -260,33 +296,67 @@
         <!-- Projects -->
         <section class="section">
             <h2 class="section-title">Projects</h2>
-            
+
+            <div class="project">
+                <div class="project-header">
+                    <span class="project-name">AgentIC (Private / IP Protected)</span>
+                    <span class="project-tech">Claude 3.5 Sonnet • Agentic AI • VLSI</span>
+                </div>
+                <p class="project-desc">
+                    A robust, automated chip design ecosystem built entirely by Claude 3.5 Sonnet. Designed to generate
+                    error-free, tapeout-ready logic and layouts for VLSI.
+                </p>
+                <p class="project-link">
+                    <span>IP Protected Project</span>
+                </p>
+            </div>
+
             <div class="project">
                 <div class="project-header">
                     <span class="project-name">The Nanosecond Arbiter</span>
                     <span class="project-tech">Rust • Lock-Free • HFT</span>
                 </div>
                 <p class="project-desc">
-                    Ultra-low latency lock-free high-frequency trading matching engine achieving 19ns latency and 51M+ operations/second throughput.
-                    Built with atomic operations and zero-copy architecture using lock-free SPSC ring buffer for production-grade trading systems.
+                    Ultra-low latency lock-free high-frequency trading matching engine achieving 19ns latency and 51M+
+                    operations/second throughput.
+                    Built with atomic operations and zero-copy architecture using lock-free SPSC ring buffer for
+                    production-grade trading systems.
                 </p>
                 <p class="project-link">
-                    <a href="https://github.com/Vickyrrrrrr/nanosecond-arbiter">github.com/Vickyrrrrrr/nanosecond-arbiter</a>
+                    <a
+                        href="https://github.com/Vickyrrrrrr/nanosecond-arbiter">github.com/Vickyrrrrrr/nanosecond-arbiter</a>
                 </p>
             </div>
 
             <div class="project">
                 <div class="project-header">
                     <span class="project-name">SwasthQ</span>
-                    <span class="project-tech">Next.js • Gemini AI • Firebase</span>
+                    <span class="project-tech">Next.js • Agentic AI • Healthcare • Firebase</span>
                 </div>
                 <p class="project-desc">
-                    AI-powered healthcare queue management system featuring smart patient registration, real-time queue tracking, 
-                    hospital kiosk integration, and doctor's dashboard. Streamlines OPD workflows with intelligent data management.
+                    AI-powered healthcare queue management system featuring smart patient registration, real-time queue
+                    tracking,
+                    hospital kiosk integration, and doctor's dashboard. Streamlines OPD workflows with intelligent data
+                    management and advanced Agentic Workflows.
                 </p>
                 <p class="project-link">
-                    Live: <a href="https://swasthqueue.vercel.app">swasthqueue.vercel.app</a> • 
+                    Live: <a href="https://swasthqueue.vercel.app">swasthqueue.vercel.app</a> •
                     Code: <a href="https://github.com/Vickyrrrrrr/SwasthQ">github.com/Vickyrrrrrr/SwasthQ</a>
+                </p>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <span class="project-name">Buildstack</span>
+                    <span class="project-tech">Next.js 16 • Firebase • NextAuth • TailwindCSS</span>
+                </div>
+                <p class="project-desc">
+                    A comprehensive development platform built with Next.js 16 and Firebase. Features secure
+                    authentication via NextAuth and modern UI components using Lucide React.
+                </p>
+                <p class="project-link">
+                    Live: <a href="https://www.buildstack.live/">www.buildstack.live</a> •
+                    Code: <a href="https://github.com/Vickyrrrrrr/buildstack">github.com/Vickyrrrrrr/buildstack</a>
                 </p>
             </div>
 
@@ -296,12 +366,13 @@
                     <span class="project-tech">Next.js 14 • TypeScript • PostgreSQL</span>
                 </div>
                 <p class="project-desc">
-                    Modern educational news platform with real-time article streaming, smart notifications, and Firebase authentication.
-                    Features infinite scroll, category filtering, bookmarks, and glassmorphism UI design.
+                    Modern educational news platform with real-time article streaming, smart notifications, and Firebase
+                    authentication.
                 </p>
                 <p class="project-link">
-                    Live: <a href="https://educational-app-theta.vercel.app">educational-app-theta.vercel.app</a> • 
-                    Code: <a href="https://github.com/laxmiv101085-web/Edu-News">github.com/laxmiv101085-web/Edu-News</a>
+                    Live: <a href="https://educational-app-theta.vercel.app">educational-app-theta.vercel.app</a> •
+                    Code: <a
+                        href="https://github.com/laxmiv101085-web/Edu-News">github.com/laxmiv101085-web/Edu-News</a>
                 </p>
             </div>
         </section>
@@ -329,7 +400,8 @@
                     <strong>GitHub:</strong> <a href="https://github.com/Vickyrrrrrr">github.com/Vickyrrrrrr</a>
                 </div>
                 <div class="link-item">
-                    <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/vicky-nishad">linkedin.com/in/vicky-nishad</a>
+                    <strong>LinkedIn:</strong> <a
+                        href="https://linkedin.com/in/vicky-nishad">linkedin.com/in/vicky-nishad</a>
                 </div>
                 <div class="link-item">
                     <strong>Instagram:</strong> <a href="https://instagram.com/vicky.socials">@vicky.socials</a>
@@ -338,4 +410,5 @@
         </section>
     </div>
 </body>
+
 </html>

@@ -72,8 +72,8 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <li
               key={link.id}
-              className={`${active === link.title ? 'text-white' : 'text-secondary'
-                } hover:text-white text-[16px] font-medium cursor-pointer transition-colors relative group`}
+              className={`${active === link.title ? 'text-black-100' : 'text-secondary'
+                } hover:text-black-100 text-[16px] font-medium cursor-pointer transition-colors relative group`}
               onClick={() => setActive(link.title)}
             >
               <a
@@ -83,12 +83,12 @@ const Navbar = () => {
                   handleScrollTo(link.id);
                 }}
               >{link.title}</a>
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-white transition-all group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-black-100 transition-all group-hover:w-full"></span>
             </li>
           ))}
-          <li className="text-secondary hover:text-white text-[16px] font-medium cursor-pointer transition-colors relative group">
-            <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-            <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-white transition-all group-hover:w-full"></span>
+          <li className="text-secondary hover:text-black-100 text-[16px] font-medium cursor-pointer transition-colors relative group">
+            <a href="/resume.html" target="_blank" rel="noopener noreferrer">Resume</a>
+            <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-black-100 transition-all group-hover:w-full"></span>
           </li>
         </ul>
 
@@ -109,7 +109,7 @@ const Navbar = () => {
               {navLinks.map((link) => (
                 <li
                   key={link.id}
-                  className={`${active === link.title ? 'text-white' : 'text-secondary'
+                  className={`${active === link.title ? 'text-black-100' : 'text-secondary'
                     } font-medium cursor-pointer text-[16px]`}
                 >
                   <a
@@ -122,7 +122,7 @@ const Navbar = () => {
                 </li>
               ))}
               <li className="text-secondary font-medium cursor-pointer text-[16px]">
-                <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                <a href="/resume.html" target="_blank" rel="noopener noreferrer">Resume</a>
               </li>
             </ul>
           </div>

@@ -36,7 +36,7 @@ const App = () => {
       }}
     >
       <div className="relative z-0 bg-primary min-h-screen">
-        <div className="relative z-10 border-b border-gray-200">
+        <div className="relative z-50 border-b border-gray-200">
           <Navbar />
         </div>
         <div className="relative z-10">
