@@ -30,7 +30,18 @@ const Hero = () => {
       </div>
 
       <div className="absolute bottom-5 md:bottom-10 w-full flex justify-center items-center z-10">
-        <a href="#about" aria-label="Scroll down">
+        <a
+          href="#about"
+          aria-label="Scroll down"
+          onClick={(e) => {
+            e.preventDefault();
+            if (window.lenis) {
+              window.lenis.scrollTo('#about', { offset: -50, duration: 1.5 });
+            } else {
+              document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+        >
           <motion.div
             animate={{
               y: [0, 15, 0],
@@ -41,7 +52,7 @@ const Hero = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="text-accent hover:text-secondary transition-colors cursor-pointer"
+            className="text-accent hover:text-secondary transition-colors cursor-pointer will-change-transform"
           >
             <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
