@@ -22,10 +22,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleResume = () => {
-    const resumeUrl = '/Resume.pdf';
-    window.open(resumeUrl);
-  };
+
 
   const handleScrollTo = (id) => {
     setActive(id);
@@ -90,7 +87,7 @@ const Navbar = () => {
             </li>
           ))}
           <li className="text-secondary hover:text-white text-[16px] font-medium cursor-pointer transition-colors relative group">
-            <button onClick={toggleResume}>Resume</button>
+            <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
             <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-white transition-all group-hover:w-full"></span>
           </li>
         </ul>
@@ -125,7 +122,7 @@ const Navbar = () => {
                 </li>
               ))}
               <li className="text-secondary font-medium cursor-pointer text-[16px]">
-                <button onClick={toggleResume}>Resume</button>
+                <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
               </li>
             </ul>
           </div>
