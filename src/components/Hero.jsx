@@ -4,7 +4,7 @@ import { styles } from "../styles";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-[80vh] mx-auto flex flex-col justify-center">
+    <section className="relative w-full h-[60vh] mx-auto flex flex-col justify-center">
       <div className={`max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 z-10 pointer-events-none`}>
         <div className="pointer-events-auto mt-[-100px]">
           <motion.h1

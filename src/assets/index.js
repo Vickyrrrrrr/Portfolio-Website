@@ -26,8 +26,8 @@ import agentic from "./projects/agentic.png";
 import claude from "./claude.svg";
 
 // Import service logos
-import videoEditing from "./services/video-editing.png";
-import musicProduction from "./services/music-production.png";
+import videoEditing from "./services/VIdeo.jpg";
+import musicProduction from "./services/Music.jpg";
 
 // Import tech logos
 import css from "./tech/css.png";
