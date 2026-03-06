@@ -1,7 +1,7 @@
-// Import company logos
 import mathwork from "./company/mathwork.png";
 import edunet from "./company/edunet.png";
 import eduskill from "./company/eduskill.png";
+import lucknow from "./company/lucknow.png";
 
 // Import tech stack images
 import python from "./tech-stack/python.png";
@@ -55,6 +55,7 @@ export {
   github,
   css,
   git,
+  lucknow,
   html,
   javascript,
   nodejs,

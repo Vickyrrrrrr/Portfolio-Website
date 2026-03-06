@@ -30,6 +30,7 @@ import {
   agentic,
   videoEditing,
   musicProduction,
+  lucknow,
 } from "../assets";
 
 export const navLinks = [
@@ -86,7 +87,7 @@ export const experiences = [
   {
     title: "Electronics & Communication Student",
     company_name: "University of Lucknow",
-    icon: "lucknow", // We'll handle this in Experience.jsx or provide a text fallback
+    icon: lucknow, // Removed the fallback string in favor of the imported image
     iconBg: "#faf9f6",
     date: "2024 - Present",
     points: [
