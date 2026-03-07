@@ -13,7 +13,7 @@ import edunews from "./projects/edunews.webp";
 import swasthq from "./projects/swasthq.webp";
 import buildstack from "./projects/buildstack.webp";
 import dawakhana from "./projects/dawakhana.webp";
-import agentic from "./projects/AgentIC.webp";
+import agentic from "./projects/agentic.webp";
 import claude from "./claude.svg";
 
 // Import service logos
