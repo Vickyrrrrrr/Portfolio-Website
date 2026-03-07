@@ -1,38 +1,38 @@
-import lucknow from "./company/lucknow.jpg";
+import lucknow from "./company/lucknow.webp";
 
 // Import tech stack images
-import python from "./tech-stack/python.png";
-import c from "./tech-stack/c.png";
-import cpp from "./tech-stack/cpp.png";
-import java from "./tech-stack/java.png";
+import python from "./tech-stack/python.webp";
+import c from "./tech-stack/c.webp";
+import cpp from "./tech-stack/cpp.webp";
+import java from "./tech-stack/java.webp";
 
 // Import project images
-import vlsiWorkspace from "./projects/vlsi-workspace.png";
-import nanosecondArbiter from "./projects/nanosecond-arbiter.png";
-import edunews from "./projects/edunews.png";
-import swasthq from "./projects/swasthq.png";
-import buildstack from "./projects/buildstack.png";
-import dawakhana from "./projects/dawakhana.jpg";
-import agentic from "./projects/AgentIC.png";
+import vlsiWorkspace from "./projects/vlsi-workspace.webp";
+import nanosecondArbiter from "./projects/nanosecond-arbiter.webp";
+import edunews from "./projects/edunews.webp";
+import swasthq from "./projects/swasthq.webp";
+import buildstack from "./projects/buildstack.webp";
+import dawakhana from "./projects/dawakhana.webp";
+import agentic from "./projects/agentic.webp";
 import claude from "./claude.svg";
 
 // Import service logos
-import videoEditing from "./services/VIdeo.jpg";
-import musicProduction from "./services/Music.jpg";
+import videoEditing from "./services/VIdeo.webp";
+import musicProduction from "./services/Music.webp";
 
 // Import tech logos
-import css from "./tech/css.png";
-import git from "./tech/git.png";
-import html from "./tech/html.png";
-import javascript from "./tech/javascript.png";
-import nodejs from "./tech/nodejs.png";
-import reactjs from "./tech/reactjs.png";
-import tailwind from "./tech/tailwind.png";
-import threejs from "./tech/threejs.png";
+import css from "./tech/css.webp";
+import git from "./tech/git.webp";
+import html from "./tech/html.webp";
+import javascript from "./tech/javascript.webp";
+import nodejs from "./tech/nodejs.webp";
+import reactjs from "./tech/reactjs.webp";
+import tailwind from "./tech/tailwind.webp";
+import threejs from "./tech/threejs.webp";
 
 // Import common assets
 import logo from "./Main.png";
-import github from "./github.png";
+import github from "./github.webp";
 import menu from "./menu.svg";
 import close from "./close.svg";
 

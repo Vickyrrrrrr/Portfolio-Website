@@ -22,6 +22,8 @@ const ProjectCard = ({ name, description, tags, image, source_code_link, live_de
             src={image}
             alt="project_image"
             className="w-full h-full object-cover rounded-[12px] opacity-90 hover:opacity-100 transition-opacity duration-300"
+            loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover gap-2">
             {live_demo_link && (
