@@ -15,44 +15,48 @@ import { textVariant } from "../utils/motion";
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
     contentStyle={{
-      background: "#ffffff",
+      background: "rgba(255, 255, 255, 0.4)",
+      backdropFilter: "blur(12px)",
       color: "#1a1a1a",
-      boxShadow: "0 2px 4px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)",
-      border: "1px solid #e5e5e5",
-      borderRadius: "12px",
+      boxShadow: "0 10px 30px -10px rgba(0, 0, 0, 0.05)",
+      border: "1px solid rgba(255, 255, 255, 0.3)",
+      borderRadius: "24px",
+      padding: "2rem",
     }}
-    contentArrowStyle={{ borderRight: "7px solid #e5e5e5" }}
+    contentArrowStyle={{ borderRight: "7px solid rgba(255, 255, 255, 0.3)" }}
     date={experience.date}
-    dateClassName="text-secondary font-medium"
-    iconStyle={{ background: experience.iconBg, boxShadow: "0 0 0 4px #faf9f6" }}
+    dateClassName="text-secondary font-bold text-[16px] px-4"
+    iconStyle={{ 
+      background: experience.iconBg, 
+      boxShadow: "0 0 0 4px #faf9f6, inset 0 2px 4px rgba(0,0,0,0.05)" 
+    }}
     icon={
       <div className="flex justify-center items-center w-full h-full">
         {experience.icon === "dot" ? (
-          <div className="w-3 h-3 rounded-full bg-black-200"></div>
+          <div className="w-4 h-4 rounded-full bg-accent shadow-lg shadow-accent/40 animate-pulse"></div>
         ) : (
           <img
             src={experience.icon}
             alt={experience.company_name}
-            className="w-[60%] h-[60%] object-contain"
+            className="w-[65%] h-[65%] object-contain drop-shadow-md"
             loading="lazy"
-            decoding="async"
           />
         )}
       </div>
     }
   >
-    <div>
-      <h3 className="text-black-100 text-[24px] font-bold font-serif">{experience.title}</h3>
-      <p className="text-secondary text-[16px] font-semibold" style={{ margin: 0 }}>
+    <div className="relative overflow-hidden">
+      <h3 className="text-black-100 text-[26px] font-bold font-serif tracking-tight">{experience.title}</h3>
+      <p className="text-accent text-[16px] font-bold uppercase tracking-widest mt-1" style={{ margin: 0 }}>
         {experience.company_name}
       </p>
     </div>
 
-    <ul className="mt-5 list-disc ml-5 space-y-2">
+    <ul className="mt-6 list-disc ml-5 space-y-3">
       {experience.points.map((point, index) => (
         <li
           key={`experience-point-${index}`}
-          className="text-black-200 text-[14px] pl-1 tracking-wide"
+          className="text-secondary text-[15px] pl-1 leading-relaxed font-medium"
         >
           {point}
         </li>

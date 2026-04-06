@@ -47,7 +47,7 @@ export const services = [
 ];
 
 export const technologies = [
-  { name: "Claude API", icon: claude },
+  { name: "LLM Orchestration", icon: claude },
   { name: "Python", icon: python },
   { name: "C++", icon: cpp },
   { name: "Java", icon: java },
@@ -69,10 +69,9 @@ export const experiences = [
     iconBg: "#faf9f6",
     date: "2023 - Present",
     points: [
-      "Continuously learning and researching advanced technologies independently since 2023.",
-      "Architecting and building complete end-to-end tools for SKY130 PDK tapeout-ready chips.",
-      "Dedicated deep research, reading extensive documentation and research papers before initiating the build process since October.",
-      "Focused on creating robust, error-free hardware logic utilizing cutting edge AI workflows."
+      "Architecting and building autonomous multi-agent systems for hardware engineering (AgentIC).",
+      "Dedicated deep research into LLM architectures and prompt engineering to ensure robust, self-correcting logic generation.",
+      "Committed to continuous learning and sharing AI insights through technical workshops and communities."
     ],
   },
   {
@@ -93,12 +92,12 @@ export const projects = [
   {
     name: "AgentIC (Private / IP Protected)",
     description:
-      "A robust, automated chip design ecosystem built entirely by Claude 3.5 Sonnet. Designed to generate error-free, tapeout-ready logic and layouts for VLSI. (Note: Repository is currently private to protect Intellectual Property).",
+      "A robust, automated chip design ecosystem powered by advanced Agentic LLM workflows. Designed to generate error-free, tapeout-ready logic and layouts for VLSI using multi-agent orchestration.",
     tags: [
-      { name: "Claude 3.5 Sonnet", color: "orange-text-gradient" },
-      { name: "Agentic AI", color: "blue-text-gradient" },
-      { name: "VLSI", color: "green-text-gradient" },
-      { name: "Tapeout-Ready", color: "pink-text-gradient" },
+      { name: "LLMs / Agentic AI", color: "orange-text-gradient" },
+      { name: "Multi-Agent System", color: "blue-text-gradient" },
+      { name: "VLSI Architecture", color: "green-text-gradient" },
+      { name: "Autonomous Workflows", color: "pink-text-gradient" },
     ],
     image: agentic,
     source_code_link: "#", // No link for private project
