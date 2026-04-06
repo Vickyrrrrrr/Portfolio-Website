@@ -35,23 +35,50 @@ const ServiceCard = ({ index, title, icon }) => (
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
-      </motion.div>
+      <div className="flex flex-col lg:flex-row gap-16 items-center">
+        <div className="flex-1">
+          <motion.div variants={textVariant()} initial="hidden" whileInView="show" viewport={{ once: true }}>
+            <p className={`${styles.sectionSubText} font-medium uppercase tracking-[3px] text-accent font-serif`}>Introduction</p>
+            <h2 className={`${styles.sectionHeadText} font-serif leading-tight text-black-100`}>Overview</h2>
+          </motion.div>
 
-      <motion.p
-        variants={fadeIn('', '', 0.1, 1)}
-        className="mt-6 text-secondary text-[17px] max-w-3xl leading-[32px] font-sans"
-      >
-        I'm Vicky Nishad, an Electronics and Communication Engineering student and a deeply passionate <strong>AI Systems Architect</strong>. My work is driven by a fascination with <strong>Large Language Models (LLMs)</strong> and the transformative power of <strong>Autonomous Agents</strong>.
-        <br /><br />
-        I specialize in designing and implementing <strong>Agentic Workflows</strong> that bridge the gap between static code and dynamic, self-evolving systems. Most notably, I developed <strong>AgentIC</strong>—an automated, tapeout-ready VLSI logic ecosystem powered by advanced LLM orchestration.
-        <br /><br />
-        As a lifelong learner, my goal is to lead student-driven AI initiatives, organize technical workshops, and empower fellow builders to integrate state-of-the-art AI into every facet of engineering. I am committed to building intelligent tools that learn, adapt, and solve complex problems responsibly.
-      </motion.p>
+          <motion.p
+            variants={fadeIn('right', 'tween', 0.1, 1)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="mt-8 text-secondary text-[18px] leading-[36px] font-medium"
+          >
+            I'm Vicky Nishad, an Electronics and Communication Engineering student and a deeply passionate <strong className="text-black-100">AI Systems Architect</strong>. My work is driven by a fascination with <strong className="text-black-100 underline decoration-accent/30">Large Language Models (LLMs)</strong> and the transformative power of <strong className="text-black-100 underline decoration-accent/30">Autonomous Agents</strong>.
+            <br /><br />
+            I specialize in designing and implementing <strong className="text-black-100">Agentic Workflows</strong> that bridge the gap between static code and dynamic, self-evolving systems.
+          </motion.p>
+        </div>
 
-      <div className="mt-20 flex flex-wrap gap-10">
+        {/* Premium 3D-like Abstract Element on the Right */}
+        <div className="hidden lg:flex flex-1 justify-center relative">
+          <motion.div
+            animate={{
+              y: [0, -40, 0],
+              rotate: [0, 45, 0],
+              scale: [1, 1.1, 1],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="w-72 h-72 bg-gradient-to-br from-accent/20 to-secondary/10 rounded-[60px] blur-[2px] border border-white/50 backdrop-blur-xl shadow-2xl relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-white/40 rounded-full blur-2xl" />
+            <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-accent/20 rounded-full blur-3xl" />
+          </motion.div>
+          {/* Subtle Background Glow for About Section */}
+          <div className="absolute inset-0 bg-accent/5 blur-[120px] -z-10 rounded-full" />
+        </div>
+      </div>
+
+      <div className="mt-10 lg:mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { About, Contact, Experience, Hero, Navbar, Tech, Works } from './components';
+import { About, Contact, Experience, Hero, Navbar, Tech, Works, Preloader } from './components';
 import Lenis from '@studio-freight/lenis';
 
 const App = () => {
@@ -35,14 +35,15 @@ const App = () => {
         v7_relativeSplatPath: true,
       }}
     >
-      <div className="relative z-0 bg-primary min-h-screen">
+      <div className="relative z-0 bg-primary min-h-screen font-sans">
+        <Preloader />
         <div className="relative z-50 border-b border-gray-200">
           <Navbar />
         </div>
         <div className="relative z-10">
           <Hero />
         </div>
-        <div className="relative z-10">
+        <div className="relative z-20">
           <About />
           <Experience />
           <Tech />
