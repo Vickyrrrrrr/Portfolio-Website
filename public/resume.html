@@ -1,407 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vicky Nishad - Resume</title>
+    <title>Vicky - Resume</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Minimalist, professional styling for human readers while maintaining perfect ATS text-flow */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.5;
             color: #333;
-            background: #f5f5f5;
-            padding: 20px;
-        }
-
-        .resume {
             max-width: 800px;
             margin: 0 auto;
-            background: white;
-            padding: 40px 50px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px 20px;
+            background: #fff;
         }
-
-        /* Header */
-        .header {
-            text-align: center;
-            border-bottom: 2px solid #1a1a2e;
-            padding-bottom: 20px;
-            margin-bottom: 25px;
-        }
-
-        .name {
-            font-size: 32px;
-            font-weight: 700;
-            color: #1a1a2e;
-            letter-spacing: 2px;
+        h1 {
+            font-size: 28px;
             margin-bottom: 5px;
-        }
-
-        .tagline {
-            font-size: 14px;
-            color: #6c63ff;
-            font-weight: 500;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-        }
-
-        .contact-info {
-            font-size: 13px;
-            color: #555;
-        }
-
-        .contact-info a {
-            color: #6c63ff;
-            text-decoration: none;
-        }
-
-        .contact-info span {
-            margin: 0 8px;
-            color: #ccc;
-        }
-
-        /* Sections */
-        .section {
-            margin-bottom: 22px;
-        }
-
-        .section-title {
-            font-size: 14px;
-            font-weight: 700;
-            color: #1a1a2e;
+            color: #111;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 8px;
-            margin-bottom: 12px;
+            letter-spacing: 1px;
         }
-
-        /* Summary */
-        .summary {
-            font-size: 13px;
+        .contact-info {
+            font-size: 14px;
             color: #555;
-            text-align: justify;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 15px;
         }
-
-        /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
+        .contact-info a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
         }
-
-        .skill-category {
-            font-size: 13px;
-        }
-
-        .skill-category strong {
-            color: #1a1a2e;
-        }
-
-        .skill-category span {
-            color: #555;
-        }
-
-        /* Projects */
-        .project {
+        h2 {
+            font-size: 18px;
+            color: #111;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
             margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 5px;
+        h3 {
+            font-size: 16px;
+            margin: 0 0 5px 0;
+            color: #222;
         }
-
-        .project-name {
+        .meta {
             font-size: 14px;
-            font-weight: 600;
-            color: #1a1a2e;
+            color: #666;
+            margin-bottom: 10px;
+            font-style: italic;
         }
-
-        .project-tech {
-            font-size: 11px;
-            color: #6c63ff;
-            font-weight: 500;
+        .meta span {
+            float: right;
         }
-
-        .project-desc {
-            font-size: 12px;
-            color: #555;
-            margin-bottom: 5px;
-        }
-
-        .project-link {
-            font-size: 11px;
-            color: #888;
-        }
-
-        .project-link a {
-            color: #6c63ff;
-            text-decoration: none;
-        }
-
-        /* Education */
-        .education-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-        }
-
-        .education-name {
+        p, li {
             font-size: 14px;
-            font-weight: 600;
-            color: #1a1a2e;
+            margin-bottom: 8px;
         }
-
-        .education-date {
-            font-size: 12px;
-            color: #888;
+        ul {
+            margin-top: 0;
+            padding-left: 20px;
         }
-
-        .education-details {
-            font-size: 12px;
-            color: #555;
-            margin-top: 3px;
-        }
-
-        /* Links */
-        .links-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .link-item {
-            font-size: 12px;
-        }
-
-        .link-item strong {
-            color: #1a1a2e;
-        }
-
-        .link-item a {
-            color: #6c63ff;
-            text-decoration: none;
-        }
-
-        /* Print button */
-        .print-btn {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .print-btn button {
-            padding: 10px 20px;
-            cursor: pointer;
-            background: #1a1a2e;
-            color: white;
-            border: none;
-            border-radius: 5px;
+        .skills-category {
             font-weight: bold;
-            font-size: 14px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background 0.3s;
         }
-
-        .print-btn button:hover {
-            background: #6c63ff;
-        }
-
-        /* Print styles */
-        @media print {
-            body {
-                background: white;
-                padding: 0;
-            }
-
-            .resume {
-                box-shadow: none;
-                padding: 20px 30px;
-            }
-
-            .print-btn {
-                display: none;
-            }
-        }
+        /* Utility class to force ATS to read block elements in order */
+        .clear { clear: both; }
     </style>
 </head>
-
 <body>
-    <div class="resume">
-        <div class="print-btn">
-            <button onclick="window.print()">🖨️ Print / Save as PDF</button>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Vicky</h1>
+        <div class="contact-info">
+            Lucknow, India &bull; 
+            <a href="mailto:vicky@example.com">Email</a> <!-- Update with real email if needed -->
+            <a href="https://github.com/Vickyrrrrrr">GitHub</a>
+            <a href="https://vickyrrrrrr.github.io/Portfolio-Website/">Portfolio</a>
         </div>
-        <!-- Header -->
-        <header class="header">
-            <h1 class="name">VICKY NISHAD</h1>
-            <p class="tagline">Electronics & Communication Engineering Student • Developer</p>
-            <p class="contact-info">
-                <a href="mailto:vickynishad110@gmail.com">vickynishad110@gmail.com</a>
-                <span>|</span>
-                <a href="https://vicky.buildstack.live/">vicky.buildstack.live</a>
-                <span>|</span>
-                <a href="https://github.com/Vickyrrrrrr">github.com/Vickyrrrrrr</a>
-                <span>|</span>
-                <a href="https://www.linkedin.com/in/vicky-nishad-117855369/">LinkedIn</a>
-            </p>
-        </header>
+    </header>
 
-        <!-- Summary -->
-        <section class="section">
-            <h2 class="section-title">Summary</h2>
-            <p class="summary">
-                Electronics and Communication Engineering student and passionate <strong>AI Systems Architect</strong> building modern web applications, <strong>Autonomous Agents</strong>, and 
-                high-performance systems. A creative problem solver dedicated to <strong>Continuous Learning</strong> and architecting intelligent tools that solve complex 
-                real-world problems through advanced LLM orchestration.
-            </p>
-        </section>
+    <!-- Education Section -->
+    <section>
+        <h2>Education</h2>
 
-        <!-- Skills -->
-        <section class="section">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <strong>Languages:</strong> <span>C, C++, Java, Python, JavaScript</span>
-                </div>
-                <div class="skill-category">
-                    <strong>Web Technologies (Currently Learning):</strong> <span>HTML, CSS, React.js, Tailwind CSS,
-                        Next.js</span>
-                </div>
-                <div class="skill-category">
-                    <strong>Tools & Platforms:</strong> <span>Git, VS Code, Firebase, Vercel</span>
-                </div>
-                <div class="skill-category">
-                    <strong>Creative:</strong> <span>Video Editing, Music Production</span>
-                </div>
-            </div>
-        </section>
+        <div>
+            <h3>University of Lucknow</h3>
+            <div class="meta">B.Tech in Electronics & Communication Engineering (ECE) <span>Expected Graduation: May 2029</span></div>
+            <ul>
+                <li><strong>Relevant Coursework:</strong> VLSI Design, Digital Electronics, Embedded Systems, Microprocessors, Data Structures & Algorithms.</li>
+                <li><strong>Focus Area:</strong> Open-Source Hardware, Semiconductor Manufacturing, Multi-Agent Systems.</li>
+            </ul>
+        </div>
+    </section>
 
-        <!-- Projects -->
-        <section class="section">
-            <h2 class="section-title">Projects</h2>
+    <!-- Technical Skills Section -->
+    <section>
+        <h2>Technical Skills</h2>
+        <ul>
+            <li><span class="skills-category">Languages:</span> Python, C++, C, JavaScript, TypeScript, Verilog, SQL, Bash.</li>
+            <li><span class="skills-category">Hardware & VLSI:</span> Open-Source EDA Tools, Sky130nm PDK, GF180MCU PDK, RTL Design, Logic Synthesis.</li>
+            <li><span class="skills-category">Backend & Cloud:</span> FastAPI, Docker, Kubernetes, Oracle Cloud, REST APIs, System Architecture.</li>
+            <li><span class="skills-category">Frontend:</span> React, Next.js, Tailwind CSS, Vite.</li>
+            <li><span class="skills-category">AI & Machine Learning:</span> LLM Orchestration, Multi-Agent Reasoning, Prompt Engineering, Model Quantization.</li>
+        </ul>
+    </section>
 
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-name">AgentIC (Private / IP Protected)</span>
-                    <span class="project-tech">LLMs • Multi-Agent Systems • Agentic AI • VLSI</span>
-                </div>
-                <p class="project-desc">
-                    A robust, automated chip design ecosystem powered by advanced Agentic LLM workflows. Designed to generate
-                    error-free, tapeout-ready logic and layouts for VLSI using multi-agent orchestration.
-                </p>
-                <p class="project-link">
-                    Live: <a href="https://agentic.buildstack.live/">agentic.buildstack.live</a> •
-                    <span>IP Protected Source Code</span>
-                </p>
-            </div>
+    <!-- Projects Section -->
+    <section>
+        <h2>Engineering Projects</h2>
 
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-name">The Nanosecond Arbiter</span>
-                    <span class="project-tech">Rust • Lock-Free • HFT</span>
-                </div>
-                <p class="project-desc">
-                    Ultra-low latency lock-free high-frequency trading matching engine achieving 19ns latency and 51M+
-                    operations/second throughput.
-                    Built with atomic operations and zero-copy architecture using lock-free SPSC ring buffer for
-                    production-grade trading systems.
-                </p>
-                <p class="project-link">
-                    <a
-                        href="https://github.com/Vickyrrrrrr/nanosecond-arbiter">github.com/Vickyrrrrrr/nanosecond-arbiter</a>
-                </p>
-            </div>
+        <div>
+            <h3>AgentIC: AI-Driven Silicon Compiler</h3>
+            <div class="meta">Lead Developer | Open Source <span>2024 - Present</span></div>
+            <ul>
+                <li>Architected and developed <strong>AgentIC</strong>, an advanced physics-aware AI hardware design suite bridging natural language and fabrication-ready GDSII chip layouts.</li>
+                <li>Automated complete VLSI architecture workflows, eliminating manual Verilog writing and debugging loops by orchestrating multiple AI agents to handle logic generation, verification, and physical routing.</li>
+                <li>Engineered seamless integration with open-source Process Design Kits (PDKs) including <strong>SkyWater 130nm</strong> and <strong>GlobalFoundries 180nm</strong>.</li>
+                <li>Packaged the entire ecosystem into a production-grade Python CLI (`pip install agentic-ic`) with dependency checks for OSS CAD Suite and Docker-based environments.</li>
+            </ul>
+        </div>
 
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-name">SwasthQ</span>
-                    <span class="project-tech">Next.js • Agentic AI • Healthcare • Firebase</span>
-                </div>
-                <p class="project-desc">
-                    AI-powered healthcare queue management system featuring smart patient registration, real-time queue
-                    tracking,
-                    hospital kiosk integration, and doctor's dashboard. Streamlines OPD workflows with intelligent data
-                    management and advanced Agentic Workflows.
-                </p>
-                <p class="project-link">
-                    Live: <a href="https://swasthqueue.vercel.app">swasthqueue.vercel.app</a> •
-                    Code: <a href="https://github.com/Vickyrrrrrr/SwasthQ">github.com/Vickyrrrrrr/SwasthQ</a>
-                </p>
-            </div>
+        <div class="clear" style="margin-top: 20px;"></div>
 
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-name">Buildstack</span>
-                    <span class="project-tech">Next.js 16 • Firebase • NextAuth • TailwindCSS</span>
-                </div>
-                <p class="project-desc">
-                    A comprehensive development platform built with Next.js 16 and Firebase. Features secure
-                    authentication via NextAuth and modern UI components using Lucide React.
-                </p>
-                <p class="project-link">
-                    Live: <a href="https://www.buildstack.live/">www.buildstack.live</a> •
-                    Code: <a href="https://github.com/Vickyrrrrrr/buildstack">github.com/Vickyrrrrrr/buildstack</a>
-                </p>
-            </div>
+        <div>
+            <h3>Life-Robo Automation Platform</h3>
+            <div class="meta">Full-Stack Developer | University Robotics Club <span>2024 - Present</span></div>
+            <ul>
+                <li>Designed and deployed a highly scalable, serverless club management platform using <strong>React, Vite, and Tailwind CSS</strong>.</li>
+                <li>Engineered a zero-maintenance backend architecture using <strong>Supabase (PostgreSQL)</strong> and serverless functions to handle high-throughput event RSVPs and idea pitch submissions.</li>
+                <li>Implemented modern, seamless UI/UX paradigms resulting in a highly optimized front-end with responsive framer-motion animations and robust data pipelines.</li>
+            </ul>
+        </div>
+    </section>
 
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-name">EduNews</span>
-                    <span class="project-tech">Next.js 14 • TypeScript • PostgreSQL</span>
-                </div>
-                <p class="project-desc">
-                    Modern educational news platform with real-time article streaming, smart notifications, and Firebase
-                    authentication.
-                </p>
-                <p class="project-link">
-                    Live: <a href="https://educational-app-theta.vercel.app">educational-app-theta.vercel.app</a> •
-                    Code: <a
-                        href="https://github.com/laxmiv101085-web/Edu-News">github.com/laxmiv101085-web/Edu-News</a>
-                </p>
-            </div>
-        </section>
+    <!-- Leadership & Experience Section -->
+    <section>
+        <h2>Leadership & Involvement</h2>
 
-        <!-- Education -->
-        <section class="section">
-            <h2 class="section-title">Education</h2>
-            <div class="education-item">
-                <span class="education-name">B.Tech in Electronics & Communication Engineering</span>
-                <span class="education-date">2025 - 2029</span>
-            </div>
-            <p class="education-details">
-                First Year • Focus on Verilog, VLSI Design, MATLAB, Signal Processing
-            </p>
-        </section>
+        <div>
+            <h3>Software & Infrastructure Lead</h3>
+            <div class="meta">Independent Research / Autonomous Agents <span>2023 - Present</span></div>
+            <ul>
+                <li>Manage full-stack, production-grade deployments on <strong>Oracle Cloud</strong> infrastructure using Docker and Kubernetes to ensure high availability of multi-agent LLM systems.</li>
+                <li>Established CI/CD pipelines via GitHub Actions to automate testing and deployment workflows for open-source EDA tools.</li>
+                <li>Actively research advanced model optimization techniques including KV cache management to reduce inference latency in hardware generation models.</li>
+            </ul>
+        </div>
+    </section>
 
-        <!-- Links -->
-        <section class="section">
-            <h2 class="section-title">Links</h2>
-            <div class="links-grid">
-                <div class="link-item">
-                    <strong>Portfolio:</strong> <a href="https://vicky.buildstack.live/">vicky.buildstack.live</a>
-                </div>
-                <div class="link-item">
-                    <strong>GitHub:</strong> <a href="https://github.com/Vickyrrrrrr">github.com/Vickyrrrrrr</a>
-                </div>
-                <div class="link-item">
-                    <strong>LinkedIn:</strong> <a
-                        href="https://www.linkedin.com/in/vicky-nishad-117855369/">linkedin.com/in/vicky-nishad-117855369</a>
-                </div>
-                <div class="link-item">
-                    <strong>Instagram:</strong> <a href="https://instagram.com/vicky.socials">@vicky.socials</a>
-                </div>
-            </div>
-        </section>
-    </div>
 </body>
-
 </html>
