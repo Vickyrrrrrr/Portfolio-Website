@@ -18,14 +18,14 @@ const ServiceCard = ({ index, title, icon }) => (
       perspective: 1000 
     }}
     whileTap={{ scale: 0.95 }}
-    className="xs:w-[250px] w-full p-[1px] rounded-[20px] shadow-card cursor-pointer group"
+    className="xs:w-[200px] w-full p-[1px] rounded-[16px] shadow-card cursor-pointer group"
   >
-    <div className="bg-white rounded-[20px] py-5 px-6 min-h-[280px] flex justify-evenly items-center flex-col border border-gray-100 hover:border-accent/40 transition-colors duration-500 shadow-sm relative overflow-hidden">
+    <div className="bg-white rounded-[20px] py-5 px-6 min-h-[200px] flex justify-evenly items-center flex-col border border-gray-100 hover:border-accent/40 transition-colors duration-500 shadow-sm relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute -top-10 -right-10 w-32 h-32 bg-accent/5 rounded-full blur-3xl group-hover:bg-accent/10 transition-all duration-700"></div>
       
-      <img src={icon} alt={title} className="w-16 h-16 object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-500" loading="lazy" />
-      <h3 className="text-black-100 text-[20px] font-bold text-center font-serif mt-4">{title}</h3>
+      <img src={icon} alt={title} className="w-12 h-12 object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+      <h3 className="text-black-100 text-[15px] font-bold text-center font-serif mt-4">{title}</h3>
       
       <div className="w-10 h-[2px] bg-accent/20 group-hover:w-full group-hover:bg-accent/40 transition-all duration-700"></div>
     </div>

@@ -47,18 +47,18 @@ export const services = [
 ];
 
 export const technologies = [
-  { name: "LLM Orchestration", icon: claude },
+  { name: "Agentic AI", icon: javascript },
   { name: "Python", icon: python },
   { name: "C++", icon: cpp },
-  { name: "Java", icon: java },
   { name: "C", icon: c },
-  { name: "HTML 5", icon: html },
-  { name: "CSS 3", icon: css },
   { name: "JavaScript", icon: javascript },
-  { name: "React JS", icon: reactjs },
-  { name: "Tailwind CSS", icon: tailwind },
-  { name: "Node JS", icon: nodejs },
-  { name: "git", icon: git },
+  { name: "React", icon: reactjs },
+  { name: "Node.js", icon: nodejs },
+  { name: "Tailwind", icon: tailwind },
+  { name: "Git", icon: git },
+  { name: "HTML", icon: html },
+  { name: "CSS", icon: css },
+  { name: "System Design", icon: java },
 ];
 
 export const experiences = [
